@@ -9,6 +9,8 @@ import {
 import Banner from './components/Banner/Banner';
 import Chefs from './components/Chefs/Chefs';
 import SingleChefsData from './components/SingleChefsData/SingleChefsData';
+import Register from './components/identity/Register';
+import Login from './components/identity/Login';
 import Home from './components/Home/Home';
 
 const router = createBrowserRouter([
@@ -19,6 +21,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
       },
       {
         path: "/data",
