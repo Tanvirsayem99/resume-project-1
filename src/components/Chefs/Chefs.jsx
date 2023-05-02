@@ -9,11 +9,10 @@ const Chefs = () => {
     const [load, setLoad] = useState(true)
 
     useEffect(()=>{
-        fetch('https://assignment-10-server-pd4ecxg74-tanvirsayem99.vercel.app/data')
+        fetch('https://assignment-10-server-tanvirsayem99.vercel.app/data')
         .then(res => res.json())
         .then (data => setChefs(data),setLoad(false))
     },[])
-    console.log(chefs)
     
     return (
         <div className='flex flex-col justify-center items-center my-5'>

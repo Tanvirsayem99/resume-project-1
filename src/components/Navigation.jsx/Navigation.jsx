@@ -1,7 +1,16 @@
 import React from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Navigation = () => {
+  const {user, logOut} = useContext(AuthContext);
+  console.log(user);
+
+  const handleLogOut = () =>{
+    logOut();
+  }
+
     return (
         <div>
                 <div className="navbar bg-red-100">
@@ -12,8 +21,10 @@ const Navigation = () => {
       </label>
       <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
       <Link to="/">Home</Link>
-      <Link to="/register">Register</Link>
-      <Link to="/login">Login</Link>
+      {
+        user?<button onClick={handleLogOut}>SignOUt</button> : <div className='flex  flex-col md:flex-row'><Link to="/register">Register</Link>
+        <Link to="/login">Login</Link></div>
+      }
       <Link to="/blog">Blog</Link>
       </ul>
     </div>
@@ -22,13 +33,17 @@ const Navigation = () => {
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 flex gap-10">
       <Link to="/">Home</Link>
-      <Link to="/register">Register</Link>
-      <Link to="/login">Login</Link>
+      {
+        user?<button onClick={handleLogOut}>SignOUt</button> : <div className='flex gap-5 flex-col md:flex-row'><Link to="/register">Register</Link>
+        <Link to="/login">Login</Link></div>
+      }
       <Link to="/blog">Blog</Link>
     </ul>
   </div>
   <div className="navbar-end">
-    <img src="#" alt="" />
+    {
+      user?.photoURL? <img src={user?.photoURL} alt=""  className='w-10 rounded-full'/> : <></>
+    }
   </div>
 </div>
         </div>

@@ -15,7 +15,7 @@ const RecipesItem = ({recipe}) => {
                 <p><span className='font-semibold text-xl'>Recipe name: </span>{name}</p>
                 <div>
                     {
-                        ingredients.map(e => <p e={e} >{e.name}</p>)
+                        ingredients.map(e => <p e={e} key={e.id} >{e.name}</p>)
                     }
                 </div>
                 <p>Making Details: {making_details}</p>
