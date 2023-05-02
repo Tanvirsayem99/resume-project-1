@@ -13,6 +13,7 @@ import Register from './components/identity/Register';
 import Login from './components/identity/Login';
 import Home from './components/Home/Home';
 import AuthProvider from './AuthProvider/AuthProvider';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/data/:id",
-        element: <SingleChefsData></SingleChefsData>,
+        element: <PrivateRoute><SingleChefsData></SingleChefsData></PrivateRoute>,
         loader:({params}) => fetch(`https://assignment-10-server-tanvirsayem99.vercel.app/data/${params.id}`)
       },
     ]

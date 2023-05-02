@@ -1,9 +1,14 @@
+import { getAuth, updateProfile } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import app from '../../Firebase/Firebase.config';
+// import app from '../../Firebase/Firebase.config';
 
 const Register = () => {
     const {createUser} = useContext(AuthContext);
+
+    const auth = getAuth(app)
 
     const [faulty, setFaulty] = useState('');
 
@@ -15,8 +20,12 @@ const Register = () => {
         const password = form.password.value;
         const photo = form.url.value;
 
+        updateProfile ( name, photo)
+
         createUser(email, password)
-        .then(result => result.user)
+        .then(result => {
+            const loggedUser = result.user;
+        })
         .catch(error =>{
             setFaulty(error.message)
         });

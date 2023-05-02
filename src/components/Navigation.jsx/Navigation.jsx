@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Navigation = () => {
   const {user, logOut} = useContext(AuthContext);
-  console.log(user);
-
+  const[hover, setHover] = useState(false)
+  console.log(user)
   const handleLogOut = () =>{
     logOut();
   }
@@ -40,10 +40,12 @@ const Navigation = () => {
       <Link to="/blog">Blog</Link>
     </ul>
   </div>
-  <div className="navbar-end">
+  <div className="navbar-end "  >
+    <div className='tooltip tooltip-bottom mr-16' data-tip={user?.displayName}>
     {
-      user?.photoURL? <img src={user?.photoURL} alt=""  className='w-10 rounded-full'/> : <></>
+      user?.photoURL? <img src={user?.photoURL} alt=""  className='w-10 rounded-full' /> : <></>
     }
+    </div>
   </div>
 </div>
         </div>
