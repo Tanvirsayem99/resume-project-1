@@ -17,9 +17,11 @@ const AuthProvider = ({children}) => {
     const [loading, setLoading] = useState(true);
 
     const googleLogin = () =>{
+        setLoading(true);
         return signInWithPopup(auth, provider)
     }
     const githubLogin = () =>{
+        setLoading(true);
         return signInWithPopup(auth, gitprovider)
     }
     const createUser = (email, password) =>{

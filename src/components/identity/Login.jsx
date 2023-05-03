@@ -3,13 +3,15 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Login = () => {
-    const {googleLogin, githubLogin, signIn}  = useContext(AuthContext);
+    const {googleLogin, githubLogin, signIn, loading}  = useContext(AuthContext);
     const [googleFaulty, setGoogleFaulty] = useState('');
     const [githubFaulty, setGithubFaulty] = useState('');
     const [faulty, setFaulty] = useState('');
     const location = useLocation();
     const navigate = useNavigate();
+    
     const from = location.state?.from?.pathname || '/';
+    
 
     const handleSubmit = event =>{
         event.preventDefault();

@@ -1,12 +1,15 @@
 import React from 'react';
+import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const RecipesItem = ({recipe}) => {
     const {name, picture, making_details, rating, ingredients} = recipe;
+    const [favorite, setFavorite] = useState(false);
 
     const handlecliker = () =>{
          toast("Item added into favorite list!");
+         setFavorite(true);
     }
     return (
         <div>
@@ -20,7 +23,10 @@ const RecipesItem = ({recipe}) => {
                 </div>
                 <p>Making Details: {making_details}</p>
                 <p>{rating}</p>
-                <button className='bg-red-200 p-2' onClick={handlecliker}>Add To Favorite</button>
+                {
+                    favorite? <button className='bg-slate-400 opacity-30 p-2' disabled={true}>Add To Favorite</button> : <button className='bg-red-200 p-2' onClick={handlecliker}>Add To Favorite</button>
+                }
+                
                 <ToastContainer />
             </div>
         </div>
