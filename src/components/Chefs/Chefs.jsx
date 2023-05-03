@@ -23,7 +23,7 @@ const Chefs = () => {
   }
 
   return (
-    <div className="md:w-auto w-11/12 mx-auto">
+    <div>
       <div className="flex flex-col justify-center items-center my-5">
         <div className="bg-red-300 rounded-tl-3xl rounded-br-3xl w-64 text-2xl text-center pr-5 py-2 mb-10">
           Most famous Bangladeshi chefs

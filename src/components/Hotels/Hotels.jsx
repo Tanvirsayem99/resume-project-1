@@ -37,7 +37,7 @@ const [hotels, setHotels] = useState([]);
           clickable: true,
         }}
         modules={[FreeMode, Pagination]}
-        className="mySwiper md:w-auto w-11/12 mx-auto"
+        className="mySwiper mx-auto"
       > <LazyLoadComponent>
         {
           hotels.map(hotel =>(<SwiperSlide key={hotel.id}><SingleHotel hotel={hotel}></SingleHotel></SwiperSlide>))

@@ -11,8 +11,8 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Banner = () => {
   return (
-    <div className="md:w-full h-[80vh] bg-slate-200 grid items-center w-11/12 mx-auto my-5">
-      <div className="flex">
+    <div className="md:w-full h-[80vh] bg-slate-200 grid items-center  mx-auto my-5">
+      <div className="flex md:mx-0 md:w-auto w-11/12 mx-auto">
         <button className="bg-red-300 p-1 ml-5 rounded-l-2xl">Bangledeshi Vegetables</button><Marquee speed={100}>
       Vegetables are an essential part of Bangladeshi cuisine. Some popular vegetable dishes include mixed vegetable curry, potato curry, lentil soup, and eggplant fry.
       </Marquee>
