@@ -15,7 +15,7 @@ const FamousFood = () => {
         return <div className='text-center my-10'><button className="btn btn-square loading "></button></div>
     }
     return (
-        <div>
+        <div className='md:w-auto w-11/12 mx-auto'>
             <h1 className='text-4xl text-center my-10 font-serif font-semibold'>Popular Food in Bangladesh</h1>
             <div className='grid md:grid-cols-3 w-11/12 mx-auto gap-10'>
             <LazyLoadComponent>
