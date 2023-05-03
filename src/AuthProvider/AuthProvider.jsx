@@ -41,8 +41,8 @@ const AuthProvider = ({children}) => {
         updateProfile(user,{
             displayName: name , photoURL: photo
         })
-        .then((res)=>{
-            console.log(res)
+        .then(()=>{
+            setLoading(true)
         })
         .catch(error =>{
             console.log(error)

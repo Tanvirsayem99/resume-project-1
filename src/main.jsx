@@ -11,17 +11,20 @@ import Chefs from './components/Chefs/Chefs';
 import SingleChefsData from './components/SingleChefsData/SingleChefsData';
 import Register from './components/identity/Register';
 import Login from './components/identity/Login';
+import Blog from './components/Blog/Blog';
 import FamousFood from './components/FamousFood/FamousFood';
 import Home from './components/Home/Home';
 import AuthProvider, { AuthContext } from './AuthProvider/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import Hotels from './components/Hotels/Hotels';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
       {
         path: "/",
@@ -42,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "/hotel",
         element: <Hotels></Hotels>,
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>,
       },
       {
         path: "/data",
