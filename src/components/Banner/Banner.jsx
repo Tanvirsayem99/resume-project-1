@@ -3,10 +3,11 @@ import Person from "../../assets/Person.jpg";
 import Marquee from "react-fast-marquee";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 
  
-
-
 
 const Banner = () => {
   return (
@@ -23,7 +24,7 @@ const Banner = () => {
         in the country. It is often served with various curries, vegetables, and
         lentil soups.
       </p>
-      <img src={Person} alt="" className="w-2/6" />
+      <LazyLoadImage src={Person} effect="blur" alt="" className="w-2/6" />
      </div>
      <div>
         

@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const ChefsCard = ({person}) => {
 
     const {name, picture, bio, likes, recipes, experience} = person;
     return (
         <div className='border border-gray-200 shadow-xl p-5 rounded-xl'>
-            <img src={picture} alt="" className='w-full'/>
+            <LazyLoadImage effect='blur' src={picture} alt="" className='w-full'/>
 
             <div>
                 <div className='flex justify-between my-5'>
