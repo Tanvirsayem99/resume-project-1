@@ -6,7 +6,7 @@ const SingleFood = ({food}) => {
 
     console.log(food)
   return (
-    <div className="card w-96 bg-base-100 shadow-2xl shadow-slate-700 ">
+    <div className="card w-full bg-base-100 shadow-2xl shadow-slate-700 mx-auto ">
       <figure>
         <LazyLoadImage
           src={image_url}

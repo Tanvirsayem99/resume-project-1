@@ -6,7 +6,7 @@ import app from '../../Firebase/Firebase.config';
 // import app from '../../Firebase/Firebase.config';
 
 const Register = () => {
-    const {createUser, user} = useContext(AuthContext);
+    const {createUser, user, updateUser} = useContext(AuthContext);
 
     const auth = getAuth(app)
 
@@ -22,16 +22,7 @@ const Register = () => {
         console.log(photo)
 
         
-            updateProfile(user, {
-                displayName: name,
-                photoURL : photo
-            })
-            .then(()=>{
-                console.log('user name updated')
-            })
-            .catch(err =>{
-                console.log(err.message)
-            })
+        updateUser(user, name, photo)
         
         
         

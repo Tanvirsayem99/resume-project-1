@@ -37,6 +37,17 @@ const AuthProvider = ({children}) => {
         setLoading(true);
         return signOut(auth)
     }
+    const updateUser = (user, name, photo) =>{
+        updateProfile(user,{
+            displayName: name , photoURL: photo
+        })
+        .then((res)=>{
+            console.log(res)
+        })
+        .catch(error =>{
+            console.log(error)
+        })
+    }
     useEffect(()=>{
         const unSubscribe = onAuthStateChanged(auth, loggedUser =>{
             setUser(loggedUser)
@@ -54,6 +65,7 @@ const AuthProvider = ({children}) => {
         loading,
         googleLogin,
         githubLogin,
+        updateUser
         
     };
     return (

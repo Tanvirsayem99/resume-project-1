@@ -23,20 +23,22 @@ const Chefs = () => {
   }
 
   return (
-    <LazyLoadComponent>
+    <div>
       <div className="flex flex-col justify-center items-center my-5">
         <div className="bg-red-300 rounded-tl-3xl rounded-br-3xl w-64 text-2xl text-center pr-5 py-2 mb-10">
           Most famous Bangladeshi chefs
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2  gap-5 mx-5">
+          <LazyLoadComponent>
           {chefs.map((person) => (
             <ChefsCard person={person} key={person.id}></ChefsCard>
           ))}
+          </LazyLoadComponent>
         </div>
         <div></div>
       </div>
-    </LazyLoadComponent>
+    </div>
   );
 };
 

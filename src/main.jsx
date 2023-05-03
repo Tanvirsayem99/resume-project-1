@@ -15,6 +15,7 @@ import FamousFood from './components/FamousFood/FamousFood';
 import Home from './components/Home/Home';
 import AuthProvider, { AuthContext } from './AuthProvider/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import Hotels from './components/Hotels/Hotels';
 
 
 const router = createBrowserRouter([
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "/foods",
         element: <FamousFood></FamousFood>,
+      },
+      {
+        path: "/hotel",
+        element: <Hotels></Hotels>,
       },
       {
         path: "/data",
