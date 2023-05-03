@@ -43,7 +43,11 @@ const Navigation = () => {
   <div className="navbar-end "  >
     <div className='tooltip tooltip-bottom mr-16' data-tip={user?.displayName}>
     {
-      user?.photoURL? <img src={user?.photoURL} alt=""  className='w-10 rounded-full' /> : <></>
+      user?.photoURL? <div className="avatar">
+      <div className="w-8 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+        <img src={user?.photoURL} />
+      </div>
+    </div> : <></>
     }
     </div>
   </div>

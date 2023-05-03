@@ -6,6 +6,9 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 const ChefsCard = ({person}) => {
 
     const {name, picture, bio, likes, recipes, experience} = person;
+    if(!person){
+        return <button className="btn loading">loading</button>;
+    }
     return (
         <div className='border border-gray-200 shadow-xl p-5 rounded-xl'>
             <LazyLoadImage effect='blur' src={picture} alt="" className='w-full'/>
