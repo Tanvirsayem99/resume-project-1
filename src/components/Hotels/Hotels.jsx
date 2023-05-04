@@ -40,7 +40,7 @@ const [hotels, setHotels] = useState([]);
         className="mySwiper mx-auto"
       > <LazyLoadComponent>
         {
-          hotels.map(hotel =>(<SwiperSlide key={hotel.id}><SingleHotel hotel={hotel}></SingleHotel></SwiperSlide>))
+          hotels?.map(hotel =>(<SwiperSlide key={hotel.id}><SingleHotel hotel={hotel}></SingleHotel></SwiperSlide>))
         }
         </LazyLoadComponent>
       </Swiper>

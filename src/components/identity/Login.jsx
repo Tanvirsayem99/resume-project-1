@@ -62,6 +62,9 @@ const Login = () => {
             </form>
             <div className='grid justify-center gap-5 my-5'>
                     {
+                        faulty? <p>{faulty}</p>: ''
+                    }
+                    {
                         googleFaulty? <p>{googleFaulty}</p>: ''
                     }
                     {

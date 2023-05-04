@@ -22,11 +22,11 @@ const Blog = () => {
 
   return (
     <div>
-        <div className=" h-32 my-5 text-center">
+        <div className=" h-32 md:my-5 mt-10 md:absolute md:right-14 md:text-left text-center">
         <button onClick={handleDownload} className="h-10  btn btn-outline btn-secondary">download</button>
         </div>
       
-        <div className="my-items">
+        <div className="my-items md:my-10 w-11/12 mx-auto">
             <AllBlogs></AllBlogs>
         </div>
       

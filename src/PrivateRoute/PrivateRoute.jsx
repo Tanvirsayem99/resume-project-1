@@ -9,13 +9,9 @@ const PrivateRoute = ({children}) => {
     
     const location = useLocation();
     if(loading){
-        return <div className='grid'>
-            <progress className="progress progress-primary w-56" value="0" max="100"></progress>
-<progress className="progress progress-primary w-56" value="10" max="100"></progress>
-<progress className="progress progress-primary w-56" value="40" max="100"></progress>
-<progress className="progress progress-primary w-56" value="70" max="100"></progress>
-<progress className="progress progress-primary w-56" value="100" max="100"></progress>
-        </div>
+        return <div className="text-center my-10">
+        <button className="btn btn-square loading "></button>
+      </div>
     }
     
      if(user){

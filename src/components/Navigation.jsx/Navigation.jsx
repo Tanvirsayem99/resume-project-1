@@ -28,7 +28,7 @@ const Navigation = () => {
       <NavLink to="/blog">Blog</NavLink>
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-xl">Food Bazar</a>
+    <Link to="/" className="btn btn-ghost normal-case text-xl">Food Bazar</Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 flex gap-10">

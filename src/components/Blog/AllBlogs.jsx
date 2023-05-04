@@ -4,9 +4,9 @@ const AllBlogs = () => {
     return (
         <div>
              <div>
-                <h1 className='text-center my-5 text-4xl font-serif font-semibold'>Question and Answer</h1>
+                <h1 className='text-center md:my-5 text-4xl font-serif font-semibold'>Question and Answer</h1>
 
-                <div className='bg-slate-300 py-5 grid gap-5'>
+                <div className='bg-slate-300 py-20 grid gap-5 my-10'>
                 <div className='w-11/12 mx-auto border border-red-400 p-10'>
                     <h1 className='text-pink-900 text-2xl'>1. Differences between uncontrolled and controlled components.</h1>
                     <p>controlled components controlled by the parent components, Uncontrolled components refer to components that manage their own state internally</p>
