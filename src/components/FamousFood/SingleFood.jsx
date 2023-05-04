@@ -25,3 +25,5 @@ const SingleFood = ({food}) => {
 };
 
 export default SingleFood;
+
+

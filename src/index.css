@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+.unique-card-Box{
+   border-radius: 20px;
+   transform-style: preserve-3d;
+}
+ .unique-card{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.75);
+    border-left: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 20px;
+    box-shadow: 0 25px 45px rgba(0 , 0, 0, 0.5);
+ }
+
+ .element{
+   position: relative;
+   top: -20px;
+   left: -30px;
+   width: 200px;
+   height: 137px;
+   background: rgba(255, 255, 255, 0.1);
+   transform: translateZ(80px);
+   backdrop-filter: blur(10px);
+   border: 1px solid rgba(255, 255, 255, 0.5);
+   border-top: 1px solid rgba(255, 255, 255, 0.75);
+   border-left: 1px solid rgba(255, 255, 255, 0.75);
+ }
+
+ .unique-img{
+   background-image: '../src/assets/bg.jpg';
+ }
