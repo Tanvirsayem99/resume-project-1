@@ -20,7 +20,9 @@ const Login = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-
+        setFaulty('');
+        setGoogleFaulty('');
+        setGithubFaulty('');
         signIn(email, password)
         .then(result => {
             const loggedUser = result.user;
@@ -74,13 +76,13 @@ const Login = () => {
                     <input type="submit" name="submit" id="" value="Login" className='bg-white w-40 rounded-xl py-2 mx-auto my-5 cursor-pointer text-black' />
                     <div>
                     {
-                        faulty? <p>{faulty}</p>: ''
+                        faulty? <p className='text-red'>{faulty}</p>: ''
                     }
                     {
-                        googleFaulty? <p>{googleFaulty}</p>: ''
+                        googleFaulty? <p className='text-red'>{googleFaulty}</p>: ''
                     }
                     {
-                        githubFaulty? <p>{githubFaulty}</p>: ''
+                        githubFaulty? <p className='text-red'>{githubFaulty}</p>: ''
                     }
                     <div className='grid justify-center gap-5'>
                     <div className=' cursor-pointer flex gap-2 btn' onClick={handleGithubLogin}> <img src={gitHub} alt="" className='w-6'/> Sign in with GitHub</div>
