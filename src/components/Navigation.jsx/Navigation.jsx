@@ -6,14 +6,13 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 const Navigation = () => {
 
   const {user, logOut} = useContext(AuthContext);
-  console.log(user)
   const handleLogOut = () =>{
     logOut();
   }
 
   return (
         <div>
-                <div className="navbar bg-slate-200">
+                <div className="navbar bg-green-100">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -28,16 +27,16 @@ const Navigation = () => {
       <NavLink to="/blog">Blog</NavLink>
       </ul>
     </div>
-    <Link to="/" className="btn btn-ghost normal-case text-xl">Food Bazar</Link>
+    <Link to="/" className="btn btn-ghost normal-case text-black text-xl">Food Bazar</Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 flex gap-10">
-      <NavLink to="/" className={({ isActive }) => (isActive ? 'text-lime-500' : '')}>Home</NavLink>
+      <NavLink to="/" className={({ isActive }) => (isActive ? 'text-lime-500' : 'text-black')}>Home</NavLink>
       {
-        user?<button onClick={handleLogOut}>SignOUt</button> : <div className='flex gap-5 flex-col md:flex-row'><NavLink to="/register" className={({ isActive }) => (isActive ? 'text-lime-500' : '')}>Register</NavLink>
-        <NavLink to="/login" className={({ isActive }) => (isActive ? 'text-lime-500' : '')}>Login</NavLink></div>
+        user?<button onClick={handleLogOut}>SignOUt</button> : <div className='flex gap-5 flex-col md:flex-row'><NavLink to="/register" className={({ isActive }) => (isActive ? 'text-lime-500' : 'text-black')}>Register</NavLink>
+        <NavLink to="/login" className={({ isActive }) => (isActive ? 'text-lime-500' : 'text-black')}>Login</NavLink></div>
       }
-      <NavLink to="/blog" className={({ isActive }) => (isActive ? 'text-lime-500' : '')}>Blog</NavLink>
+      <NavLink to="/blog" className={({ isActive }) => (isActive ? 'text-lime-500' : 'text-black')}>Blog</NavLink>
     </ul>
   </div>
   <div className="navbar-end "  >

@@ -13,7 +13,6 @@ import { FreeMode, Pagination } from "swiper";
 const Hotels = () => {
 const [hotels, setHotels] = useState([]);
   const [load, setLoad] = useState(false);
-  console.log(hotels)
 
   useEffect(() => {
     fetch("https://assignment-10-server-tanvirsayem99.vercel.app/hotel")

@@ -26,7 +26,7 @@ const ChefsCard = ({ person }) => {
             <p>Likes: {likes}</p>
           </div>
           <div className="text-center my-4">
-            <button className="btn btn-outline btn-success ">
+            <button className=" bg-transparent border border-green-700 p-2 bg-white rounded-lg text-black btn-success ">
               <Link to={`/data/${person.id}`}>View Recipes</Link>
             </button>
           </div>
@@ -37,3 +37,6 @@ const ChefsCard = ({ person }) => {
 };
 
 export default ChefsCard;
+
+
+<LazyLoadImage src=""  effect="blur"></LazyLoadImage>

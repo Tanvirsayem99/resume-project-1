@@ -4,7 +4,6 @@ import { useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import ChefsCard from "../ChefsCard/ChefsCard";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
-import image from "../../../src/assets/bg-texture-min.jpg"
 
 const Chefs = () => {
   const [chefs, setChefs] = useState([]);
@@ -25,8 +24,8 @@ const Chefs = () => {
 
   return (
     <div>
-      <div className="flex flex-col justify-center bg-[url('../../../src/assets/bg-texture-min.jpg')]  items-center my-5 py-5">
-        <div className="bg-green-500 text-white rounded-tl-3xl rounded-br-3xl w-64 text-2xl text-center pr-5 py-2 mb-10">
+      <div className="flex flex-col justify-center  items-center my-5 py-5">
+        <div className="bg-white  text-black rounded-tl-3xl rounded-br-3xl w-64 text-2xl text-center pr-5 py-2 mb-10">
           Most famous Bangladeshi chefs
         </div>
         <LazyLoadComponent>
@@ -43,3 +42,5 @@ const Chefs = () => {
 };
 
 export default Chefs;
+
+

@@ -2,9 +2,8 @@ import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 const SingleHotel = ({hotel}) => {
     const {name, city, address, cuisine, img, rating, reviews} = hotel;
-    console.log(hotel)
     return (
-        <div className='card shadow-2xl md:w-3/6 mx-auto my-10'>
+        <div className='card shadow-2xl md:w-3/6 mx-auto my-10 bg-slate-100'>
             <LazyLoadImage effect='blur' src={img} alt="" className='w-full p-10' />
             <div className='px-10 pb-5 md:flex-row flex-col md:gap-0 gap-2 flex justify-between'>
             <div className='grid gap-2 text-center md:text-left'>

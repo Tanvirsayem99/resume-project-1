@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import google from '../../assets/google.png'
+import gitHub from '../../assets/github.png'
 
 const Login = () => {
     const {googleLogin, githubLogin, signIn, loading}  = useContext(AuthContext);
@@ -51,16 +53,26 @@ const Login = () => {
         })
     }
     return (
-        <div className='my-10 w-11/12 md:w-2/6 mx-auto'>
-            <div className='md:2/6 mx-auto border border-red-200 p-5 rounded-tl-3xl rounded-br-3xl bg-slate-100'>
-            <form onSubmit={handleSubmit} className='grid w-11/12  md:w-full mx-auto gap-5 '>
-                <h1 className='text-center text-3xl font-serif font-semibold'>Please Login</h1>
-                    <input type="email" name="email" id="" required placeholder='Type Your Email' className='bg-slate-200 pl-3 py-3 rounded-md border border-slate-500' />
-                    <input type="password" name="password" id="" required placeholder='Type Your Password' className='bg-slate-200 pl-3 py-3 rounded-md border border-slate-500' />
-                    <p>If You Are New? Please <Link className='text-blue-500' to="/register" >Register</Link></p>
-                    <input type="submit" name="submit" id="" value="Login" className='bg-red-300 w-40 rounded-xl py-2 mx-auto' />
-            </form>
-            <div className='grid justify-center gap-5 my-5'>
+        <div className='my-5 box mx-auto md:w-2/6 w-11/12'>
+            <span className='borderLine'></span>
+            
+            <form onSubmit={handleSubmit}>
+                <h1 className='text-slate-50 text-2xl text-center font-serif mt-3'> Login</h1>
+                <div className="input-box w-11/12">
+                <input type="email" name="email" id="" required/>
+                    <span>Username</span>
+                    <i></i>
+                </div>    
+                <div className="input-box w-11/12">
+                <input type="password" name="password" id="" required />
+                    <span>Password</span>
+                    <i></i>
+                </div>        
+                   
+                    
+                <p className='link'>If You Are New? Please <Link className='text-blue-500' to="/register" >Register</Link></p>
+                    <input type="submit" name="submit" id="" value="Login" className='bg-white w-40 rounded-xl py-2 mx-auto my-5 cursor-pointer text-black' />
+                    <div>
                     {
                         faulty? <p>{faulty}</p>: ''
                     }
@@ -70,10 +82,14 @@ const Login = () => {
                     {
                         githubFaulty? <p>{githubFaulty}</p>: ''
                     }
-                    <button className='bg-slate-400 w-44 py-2' onClick={handleGithubLogin}>Sign in with GitHub</button>
-                    <button className='bg-slate-400 w-44 py-2' onClick={handleGoogleLogin}> Sign in with Google</button>
+                    <div className='grid justify-center gap-5'>
+                    <div className=' cursor-pointer flex gap-2 btn' onClick={handleGithubLogin}> <img src={google} alt="" className='w-6'/> Sign in with GitHub</div>
+                    <div className='cursor-pointer flex gap-2 btn' onClick={handleGoogleLogin}> <img src={gitHub} alt="" className='w-6'/> Sign in with Google</div>
                     </div>
             </div>
+            </form>
+           
+            
         </div>
     );
 };

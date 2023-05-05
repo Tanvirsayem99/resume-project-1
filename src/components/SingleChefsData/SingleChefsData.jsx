@@ -8,7 +8,6 @@ const SingleChefsData = () => {
     const sayem = useParams();
     const singleData = useLoaderData();
     const {name, picture, bio, likes, recipes, experience} = singleData;
-    console.log(singleData);
     if(!singleData){
         return <div className='text-center my-10'><button className="btn btn-square loading "></button></div>
     }

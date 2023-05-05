@@ -26,7 +26,8 @@ const RecipesItem = ({recipe}) => {
                 <p>Making Details: {making_details}</p>
                 <p>{rating}</p>
                 {
-                    favorite? <button className='bg-slate-400 opacity-30 p-2' disabled={true}>Add To Favorite</button> : <button className='bg-red-200 p-2' onClick={handlecliker}>Add To Favorite</button>
+                    favorite? <button className='bg-slate-400 opacity-30 p-2' disabled={true}>Add To Favorite</button> :
+                     <button className='bg-red-200 p-2' onClick={handlecliker}>Add To Favorite</button>
                 }
                 
                 <ToastContainer />

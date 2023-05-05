@@ -5,14 +5,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import image  from "../../../src/assets/bg.jpg";
+import image  from "../../assets/bg.jpg";
 
 
  
 
 const Banner = () => {
   return (
-    <div className="md:w-full h-[80vh] bg-[url('../../../src/assets/bg.jpg')] grid items-center  mx-auto">
+    <div className="md:w-full h-[80vh] bg-red-300 grid items-center  mx-auto">
       <div className="flex md:mx-0 md:w-auto w-11/12 mx-auto">
         <button className="bg-green-500 text-white font-semibold p-1 ml-5 rounded-l-2xl">Bangledeshi Vegetables</button><Marquee speed={100} className="text-white">
       Vegetables are an essential part of Bangladeshi cuisine. Some popular vegetable dishes include mixed vegetable curry, potato curry, lentil soup, and eggplant fry.

@@ -2,11 +2,9 @@ import React from "react";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 const SingleFood = ({food}) => {
-    const {name, description, region, image_url} = food;
-
-    console.log(food)
+  const {name, description, region, image_url} = food;
   return (
-    <div className="card w-full bg-base-100 shadow-2xl shadow-slate-700 mx-auto ">
+    <div className="card w-full bg-white shadow-2xl shadow-slate-700 mx-auto ">
       <figure>
         <LazyLoadImage
           src={image_url}
