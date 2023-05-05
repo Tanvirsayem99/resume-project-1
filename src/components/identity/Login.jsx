@@ -83,8 +83,8 @@ const Login = () => {
                         githubFaulty? <p>{githubFaulty}</p>: ''
                     }
                     <div className='grid justify-center gap-5'>
-                    <div className=' cursor-pointer flex gap-2 btn' onClick={handleGithubLogin}> <img src={google} alt="" className='w-6'/> Sign in with GitHub</div>
-                    <div className='cursor-pointer flex gap-2 btn' onClick={handleGoogleLogin}> <img src={gitHub} alt="" className='w-6'/> Sign in with Google</div>
+                    <div className=' cursor-pointer flex gap-2 btn' onClick={handleGithubLogin}> <img src={gitHub} alt="" className='w-6'/> Sign in with GitHub</div>
+                    <div className='cursor-pointer flex gap-2 btn' onClick={handleGoogleLogin}> <img src={google} alt="" className='w-6'/> Sign in with Google</div>
                     </div>
             </div>
             </form>

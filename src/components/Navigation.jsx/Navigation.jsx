@@ -21,7 +21,7 @@ const Navigation = () => {
       <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
       <NavLink to="/" className={({ isActive }) => (isActive ? 'text-lime-500' : '')}>Home</NavLink>
       {
-        user?<button onClick={handleLogOut}>SignOUt</button> : <div className='flex  flex-col md:flex-row'><NavLink to="/register" className={({ isActive }) => (isActive ? 'text-lime-500' : '')}>Register</NavLink>
+        user?<button onClick={handleLogOut} className="w-10">SignOut</button> : <div className='flex flex-col md:flex-row'><NavLink to="/register" className={({ isActive }) => (isActive ? 'text-lime-500' : '')}>Register</NavLink>
         <NavLink to="/login" className={({ isActive }) => (isActive ? 'text-lime-500' : '')}>Login</NavLink></div>
       }
       <NavLink to="/blog">Blog</NavLink>
@@ -33,7 +33,7 @@ const Navigation = () => {
     <ul className="menu menu-horizontal px-1 flex gap-10">
       <NavLink to="/" className={({ isActive }) => (isActive ? 'text-lime-500' : 'text-black')}>Home</NavLink>
       {
-        user?<button onClick={handleLogOut}>SignOUt</button> : <div className='flex gap-5 flex-col md:flex-row'><NavLink to="/register" className={({ isActive }) => (isActive ? 'text-lime-500' : 'text-black')}>Register</NavLink>
+        user?<button onClick={handleLogOut} className="text-black">SignOUt</button> : <div className='flex gap-5 flex-col md:flex-row'><NavLink to="/register" className={({ isActive }) => (isActive ? 'text-lime-500' : 'text-black')}>Register</NavLink>
         <NavLink to="/login" className={({ isActive }) => (isActive ? 'text-lime-500' : 'text-black')}>Login</NavLink></div>
       }
       <NavLink to="/blog" className={({ isActive }) => (isActive ? 'text-lime-500' : 'text-black')}>Blog</NavLink>
